@@ -16,13 +16,46 @@ import Card from '../components/Card.astro';
 			The training staff should be able to create reports from our charts.
 			Our application should be free or much cheaper than competitors.
 			<br /><br />
-			<strong>Approach</strong><br />
+			<strong>Sprint 3 Goal</strong><br />
 			We created a serverless web application with metric pages for each player and the team as a whole.
 			We get data from each system via an API.
 			We store this data in our application's database for optimized performance.
 			We met with the client before the sprint and we communicated with them during the sprint.
 			This allowed us to understand their requirements and implement the most important features.
 		</p>
+		<h2 class="text-gradient">Features</h2>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://nextjs.org/"
+				title="Login Screen"
+				body="A full stack web application framework for React. Next has many state-of-the-art features that improve our application. We chose Next so that we could use all the tools in the React ecosystem and because our interactive charts require high performance."
+			/>
+			<Card
+				href="https://supabase.com/"
+				title="Leaderboard Page"
+				body="A backend-as-a-service platform built on AWS. Supabase provides a simple interface to a PostgreSQL database and authentication. We chose Supabase over Firebase because our data is highly structured."
+			/>
+			<Card
+				href="https://vercel.com/"
+				title="Player Metrics Page"
+				body="A platform hosting serverless Next.js applications. We chose Vercel because of its integration features with Next.js and its free tier is plenty for handling our small user base."
+			/>
+			<Card
+				href="https://www.firstbeat.com/en/"
+				title="Team Metrics Page"
+				body="System for storing player vitals data."
+			/>
+			<Card
+				href="https://www.hawkindynamics.com/"
+				title="Admin Page"
+				body="System for storing player movement data."
+			/>
+			<Card
+				href="https://www.hawkindynamics.com/"
+				title="Gamified Leaderboard Page"
+				body="System for storing player movement data."
+			/>
+		</ul>
 		<h2 class="text-gradient">Tools / APIs / Frameworks</h2>
 		<ul role="list" class="link-card-grid">
 			<Card
@@ -56,6 +89,26 @@ import Card from '../components/Card.astro';
 				body="System for storing player GPS data."
 			/>
 		</ul>
+		<h2 class="text-gradient">Sprint 3 Backlog</h2>
+		<p class="overview">
+			<strong>Overview</strong><br />
+			The first time a user comes to the site, they must sign in.
+			After a user logs in, they can view team data on the team page or view each player's data on the player page.
+			The player page includes a table that allows the user to navigate between each player's page.
+			Each one of these pages consists of charts and metrics for the player.
+			The team page is similar to an individual player page, except the data is the average for the entire team.
+			Each chart can be filtered by a length of time and/or a type of metric.
+		</p>
+		<h2 class="text-gradient">Sprint 3 Retrospective</h2>
+		<p class="overview">
+			<strong>Overview</strong><br />
+			The first time a user comes to the site, they must sign in.
+			After a user logs in, they can view team data on the team page or view each player's data on the player page.
+			The player page includes a table that allows the user to navigate between each player's page.
+			Each one of these pages consists of charts and metrics for the player.
+			The team page is similar to an individual player page, except the data is the average for the entire team.
+			Each chart can be filtered by a length of time and/or a type of metric.
+		</p>
 		<h2 class="text-gradient">User Experience</h2>
 		<p class="overview">
 			<strong>Overview</strong><br />

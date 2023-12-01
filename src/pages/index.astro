@@ -2,223 +2,241 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import { YouTube } from '@astro-community/astro-embed-youtube';
+import { Image } from 'astro:assets';
+import backlog from '../backlog.png';
 ---
 
 <Layout title="Fall 2023 CS 495 Group G">
-	<main>
-		<h1 class="text-gradient">Bama Hoop Metrics</h1>
-		<h2 class="text-gradient">Project Overview</h2>
-		<p class="overview">
-			<strong>Goals</strong><br />
-			The University of Alabama's Men's Basketball team tracks various performance metrics with wearable technology.
-			This data is stored in three separate systems. The training staff must clean and combine the data to gain insights from it.
-			Our goal is to create a web application that combines the data from each system into highly visual dashboards for the training staff.
-			The training staff should be able to monitor overall team and individual player performance from our dashboards.
-			The training staff should be able to create reports from our charts.
-			Our application should be free or much cheaper than competitors.
-			<br /><br />
-			<strong>Sprint 3 Goal</strong><br />
-			We created a serverless web application with metric pages for each player and the team as a whole.
-			We get data from each system via an API.
-			We store this data in our application's database for optimized performance.
-			We met with the client before the sprint and we communicated with them during the sprint.
-			This allowed us to understand their requirements and implement the most important features.
-		</p>
-		<h2 class="text-gradient">Features</h2>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://nextjs.org/"
-				title="Login Screen"
-				body="A full stack web application framework for React. Next has many state-of-the-art features that improve our application. We chose Next so that we could use all the tools in the React ecosystem and because our interactive charts require high performance."
-			/>
-			<Card
-				href="https://supabase.com/"
-				title="Leaderboard Page"
-				body="A backend-as-a-service platform built on AWS. Supabase provides a simple interface to a PostgreSQL database and authentication. We chose Supabase over Firebase because our data is highly structured."
-			/>
-			<Card
-				href="https://vercel.com/"
-				title="Player Metrics Page"
-				body="A platform hosting serverless Next.js applications. We chose Vercel because of its integration features with Next.js and its free tier is plenty for handling our small user base."
-			/>
-			<Card
-				href="https://www.firstbeat.com/en/"
-				title="Team Metrics Page"
-				body="System for storing player vitals data."
-			/>
-			<Card
-				href="https://www.hawkindynamics.com/"
-				title="Admin Page"
-				body="System for storing player movement data."
-			/>
-			<Card
-				href="https://www.hawkindynamics.com/"
-				title="Gamified Leaderboard Page"
-				body="System for storing player movement data."
-			/>
-		</ul>
-		<h2 class="text-gradient">Tools / APIs / Frameworks</h2>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://nextjs.org/"
-				title="Next.js"
-				body="A full stack web application framework for React. Next has many state-of-the-art features that improve our application. We chose Next so that we could use all the tools in the React ecosystem and because our interactive charts require high performance."
-			/>
-			<Card
-				href="https://supabase.com/"
-				title="Supabase"
-				body="A backend-as-a-service platform built on AWS. Supabase provides a simple interface to a PostgreSQL database and authentication. We chose Supabase over Firebase because our data is highly structured."
-			/>
-			<Card
-				href="https://vercel.com/"
-				title="Vercel"
-				body="A platform hosting serverless Next.js applications. We chose Vercel because of its integration features with Next.js and its free tier is plenty for handling our small user base."
-			/>
-			<Card
-				href="https://www.firstbeat.com/en/"
-				title="Firstbeat API"
-				body="System for storing player vitals data."
-			/>
-			<Card
-				href="https://www.hawkindynamics.com/"
-				title="Hawkins Dynamics API"
-				body="System for storing player movement data."
-			/>
-			<Card
-				href="https://kinexon.com/"
-				title="Kinexon API"
-				body="System for storing player GPS data."
-			/>
-		</ul>
-		<h2 class="text-gradient">Sprint 3 Backlog</h2>
-		<p class="overview">
-			<strong>Overview</strong><br />
-			The first time a user comes to the site, they must sign in.
-			After a user logs in, they can view team data on the team page or view each player's data on the player page.
-			The player page includes a table that allows the user to navigate between each player's page.
-			Each one of these pages consists of charts and metrics for the player.
-			The team page is similar to an individual player page, except the data is the average for the entire team.
-			Each chart can be filtered by a length of time and/or a type of metric.
-		</p>
-		<h2 class="text-gradient">Sprint 3 Retrospective</h2>
-		<p class="overview">
-			<strong>Overview</strong><br />
-			The first time a user comes to the site, they must sign in.
-			After a user logs in, they can view team data on the team page or view each player's data on the player page.
-			The player page includes a table that allows the user to navigate between each player's page.
-			Each one of these pages consists of charts and metrics for the player.
-			The team page is similar to an individual player page, except the data is the average for the entire team.
-			Each chart can be filtered by a length of time and/or a type of metric.
-		</p>
-		<h2 class="text-gradient">Demo</h2>
-		<p class="overview">
-			<YouTube id="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-		</p>
-		<h2 class="text-gradient">User Experience</h2>
-		<p class="overview">
-			<strong>Overview</strong><br />
-			The first time a user comes to the site, they must sign in.
-			After a user logs in, they can view team data on the team page or view each player's data on the player page.
-			The player page includes a table that allows the user to navigate between each player's page.
-			Each one of these pages consists of charts and metrics for the player.
-			The team page is similar to an individual player page, except the data is the average for the entire team.
-			Each chart can be filtered by a length of time and/or a type of metric.
-			<br /><br />
-			<strong>Example Scenario</strong><br />
-			Coach Hen wants to report Mark Sear's weekly training data.<br />
-			1. Coach navigates to the Bama Hoop Metrics website.<br />
-			2. Coach selects "Player Metrics".<br />
-			3. Coach selects Mark's cell in the players table.<br />
-			4. Coach filters the dashboard for the past week and the metrics he wants to see.<br />
-			5. Coach exports the Mark Sears page.<br />
-			6. Coach uses the data to report on Mark's training performance.<br />
-		</p>
-		<h2 class="text-gradient">Team Members</h2>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://github.com/jdc-25"
-				title="JD Calvert"
-				body="User Experience"
-			/>
-			<Card
-				href="https://github.com/AndrewH-14"
-				title="Andrew Hankins"
-				body="API Integration, Front-End"
-			/>
-			<Card
-				href="https://github.com/Isvatten0"
-				title="Luke Roberts"
-				body="API Integration, Client Coordinator"
-			/>
-			<Card
-				href="https://github.com/jo-meister"
-				title="Joey Walker"
-				body="Database, Authentication"
-			/>
-		</ul>
-	</main>
-</Layout>
+  <main>
+    <h1 class="text-gradient">Bama Hoop Metrics</h1>
+    <h2 class="text-gradient">Team Members</h2>
+    <ul role="list" class="link-card-grid">
+      <Card href="https://github.com/jdc-25" title="JD Calvert" body="" />
+      <Card
+        href="https://github.com/AndrewH-14"
+        title="Andrew Hankins"
+        body=""
+      />
+      <Card href="https://github.com/Isvatten0" title="Luke Roberts" body="" />
+      <Card href="https://github.com/jo-meister" title="Joey Walker" body="" />
+    </ul>
+    <h2 class="text-gradient">Project Overview</h2>
+    <div class="overview">
+      <strong>Goals</strong><br />
+       The University of Alabama's Men's Basketball team tracks various
+      performance metrics with wearable technology. This data is stored in three
+      separate systems. The training staff must clean and combine the data to
+      gain insights from it. Our goal is to create a web application that
+      combines the data from each system into highly visual dashboards for the
+      training staff. The training staff should be able to monitor overall team
+      and individual player performance from our dashboards. The training staff
+      should be able to create reports from our charts. Our application should
+      be free or much cheaper than competitors.
+      <br /><br />
+      <strong>Approach</strong><br />
+       We created a serverless web application with metric pages for each player
+      and the team as a whole. We get data from each system via an API. We store
+      this data in our application's database for optimized performance. We met
+      with the client before the sprint and we communicated with them during the
+      sprint. This allowed us to understand their requirements and implement the
+      most important features.
+      <br /><br />
+      <strong>Sprint 3 Goals</strong><br />
+      <ul>
+        <li>Improve UI/UX</li>
+        <li>Finalize API data pulling</li>
+        <li>Finish team page</li>
+        <li>Implement ranking on leaderboard page</li>
+        <li>Create gamified leaderboard page</li>
+        <li>Make data exportable to CSV</li>
+        <li>Create project website</li>
+        <li>Deploy APP to Vercel</li>
+        <li>Create user/developer guides</li>
+      </ul>
+    </div>
+    <h2 class="text-gradient">Features</h2>
+    <ul role="list" class="link-card-grid">
+      <Card
+        href="https://tidetrack.vercel.app"
+        title="Login Screen"
+        body="Default page when user is not signed in. Allows only authorized users to access application."
+      />
+      <Card
+        href="https://tidetrack.vercel.app/player"
+        title="Leaderboard Page"
+        body="Page containing a list of all players in order of top performers."
+      />
+      <Card
+        href="https://tidetrack.vercel.app/player/marksears"
+        title="Player Metrics Page"
+        body="Page for each player that allows the user to view custom charts for all metrics and timeframes."
+      />
+      <Card
+        href="https://tidetrack.vercel.app/team"
+        title="Team Metrics Page"
+        body="Page for the team session average that allows the user to view custom charts for all metrics and timeframes."
+      />
+      <Card
+        href="https://tidetrack.vercel.app/admin"
+        title="Admin Page"
+        body="Page that allows the user to edit, create, and delete players and users."
+      />
+      <Card
+        href="https://tidetrack.vercel.app/teamLeaderboard"
+        title="Gamified Leaderboard Page"
+        body="Page where players can view who is performing the best."
+      />
+    </ul>
+    <h2 class="text-gradient">Tools / APIs / Frameworks</h2>
+    <ul role="list" class="link-card-grid">
+      <Card
+        href="https://nextjs.org/"
+        title="Next.js"
+        body="A full stack web application framework for React. Next has many state-of-the-art features that improve our application. We chose Next so that we could use all the tools in the React ecosystem and because our interactive charts require high performance."
+      />
+      <Card
+        href="https://supabase.com/"
+        title="Supabase"
+        body="A backend-as-a-service platform built on AWS. Supabase provides a simple interface to a PostgreSQL database and authentication. We chose Supabase over Firebase because our data is highly structured and better fits the relational database model."
+      />
+      <Card
+        href="https://vercel.com/"
+        title="Vercel"
+        body="A platform hosting serverless Next.js applications. We chose Vercel because of its integration features with Next.js and its free tier is plenty for handling our small user base."
+      />
+      <Card
+        href="https://www.firstbeat.com/en/"
+        title="Firstbeat API"
+        body="System for storing player vitals data."
+      />
+      <Card
+        href="https://www.hawkindynamics.com/"
+        title="Hawkins Dynamics API"
+        body="System for storing force-plate data."
+      />
+      <Card
+        href="https://kinexon.com/"
+        title="Kinexon API"
+        body="System for storing player GPS data."
+      />
+    </ul>
+    <h2 class="text-gradient">Sprint 3 Backlog</h2>
+    <Image src={backlog} alt="Sprint 3 Backlog." width="500" />
+    <h2 class="text-gradient">Sprint 3 Retrospective</h2>
+    <div class="overview">
+      <strong>What went well</strong><br />
+      <ul>
+        <li>Able to effectively divide up the workload.</li>
+        <li>Deploying application to Vercel.</li>
+        <li>Able to implement feedback from clients.</li>
+        <li>Client liked our presentation of the product.</li>
+      </ul>
+      <strong>What didn't go well</strong><br />
+      <ul>
+        <li>Communication about state of features.</li>
+      </ul>
+      <strong>What could be improved</strong><br />
+      <ul>
+        <li>Improved documentation of code.</li>
+      </ul>
+      <strong>Challenges</strong><br />
+      <ul>
+        <li>Issues with Supabase rules when pulling data.</li>
+        <li>Finding the time to complete/finalize the project.</li>
+      </ul>
+    </div>
+    <h2 class="text-gradient">Demo</h2>
+    <p class="overview">
+      <YouTube id="https://www.youtube.com/watch?v=oTKmn5LcKHU" />
+      <h2 class="text-gradient">User Experience</h2>
+      <p class="overview">
+        <strong>Overview</strong><br />
+         The first time a user comes to the site, they must sign in. After a
+        user logs in, they can view team data on the team page or view each
+        player's data on the player page. The player page includes a table that
+        allows the user to navigate between each player's page. Each one of
+        these pages consists of charts and metrics for the player. The team page
+        is similar to an individual player page, except the data is the average
+        for the entire team. Each chart can be filtered by a length of time
+        and/or a type of metric.
+        <br /><br />
+        <strong>Example Scenario</strong><br />
+         Coach Hen wants to report Mark Sear's weekly training data.<br />
+         1. Coach navigates to the Bama Hoop Metrics website.<br />
+         2. Coach selects "Player Metrics".<br />
+         3. Coach selects Mark's cell in the players table.<br />
+         4. Coach filters the dashboard for the past week and the metrics he
+        wants to see.<br />
+         5. Coach exports the Mark Sears page.<br />
+         6. Coach uses the data to report on Mark's training performance.<br />
+      </p>
+    </p>
+  </main>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	h2 {
-		font-size: 2rem;
-		font-weight: 700;
-		line-height: 1;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.overview {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.overview code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.overview strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-</style>
+  <style>
+    main {
+      margin: auto;
+      padding: 1rem;
+      width: 800px;
+      max-width: calc(100% - 2rem);
+      color: white;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+    .astro-a {
+      position: absolute;
+      top: -32px;
+      left: 50%;
+      transform: translatex(-50%);
+      width: 220px;
+      height: auto;
+      z-index: -1;
+    }
+    h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .text-gradient {
+      background-image: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 400%;
+      background-position: 0%;
+    }
+    .overview {
+      margin-bottom: 2rem;
+      border: 1px solid rgba(var(--accent-light), 25%);
+      background: linear-gradient(
+        rgba(var(--accent-dark), 66%),
+        rgba(var(--accent-dark), 33%)
+      );
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+    .overview code {
+      font-size: 0.8em;
+      font-weight: bold;
+      background: rgba(var(--accent-light), 12%);
+      color: rgb(var(--accent-light));
+      border-radius: 4px;
+      padding: 0.3em 0.4em;
+    }
+    .overview strong {
+      color: rgb(var(--accent-light));
+    }
+    .link-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+      gap: 2rem;
+      padding: 0;
+    }
+  </style>
+</Layout>
